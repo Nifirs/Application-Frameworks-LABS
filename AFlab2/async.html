@@ -1,0 +1,21 @@
+<html>
+<script>
+
+//Async/Await function
+
+async function fetchUsersAsync() {
+const response = await fetch('https://api.github.com/users');
+const json = await response.json();
+console.log(json);
+}
+
+
+fetchUsersAsync();
+
+
+
+</script>
+
+
+
+<html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <script>
+//Question 1:
+
+        var vehicleName = 'Toyota';//Global variable declaration
+
+        function printVehicleNameOuter() {
+            console.log(this.vehicleName);
+        }
+        console.log(this);
+
+        printVehicleNameOuter();
+
+///////////////////////////////////////////////////////
+
+        var vehicle = {
+                vehicleName: 'Nissan',
+                printVehicleNameInner: printVehicleNameOuter
+            };
+        vehicle.printVehicleNameInner();
+
+
+//////////////////////////////////////////////////////
+
+        var vehicle={
+            vehicleName:'Nissan',
+            printVehicleNameInner:function () {
+
+                return function(){
+
+                    console.log(this.vehicleName);
+
+                }
+            }
+        }
+
+
+
+
+
+        var execute=vehicle.printVehicleNameInner();
+
+        execute();
+
+///////////////////////////////////bind and call methods
+
+
+        execute.call(vehicle);
+
+        var execute = vehicle.printVehicleNameInner().bind(vehicle);
+        execute();
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+</head>
+<body>
+
+</body>
+</html>

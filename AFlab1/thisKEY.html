@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>This key word</title>
+</head>
+<body>
+<script>
+
+
+    var vehicleName="car"
+
+    function printVehicleName()
+    {
+
+
+        console.log("THIS vehicle name is: "+this.vehicleName)
+
+    }
+
+
+    var Vehicle=
+        {
+        vehicleName: "VAN",
+        getVehicleName:function(){printVehicleName()}
+
+    }
+
+    Vehicle.getVehicleName()
+
+
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JSON</title>
+</head>
+<body>
+
+<p id="demo"></p>
+
+
+<SCRIPT>
+
+    //Method 1:----->window output
+    var myJSON = '{"name":"John", "age":31, "city":"New York"}';
+    var myObj = JSON.parse(myJSON);
+    document.getElementById("demo").innerHTML = myObj.name;
+
+
+
+    //Method 2:--------->console output
+
+
+    function runner(object){
+
+        object.fun(object.msg)
+
+    }
+
+
+
+    var obj = {
+
+        "msg" : "hello world",
+
+        "fun" : (msg) => {
+
+            console.log(msg)
+
+        }
+
+    }
+
+    runner(obj)
+
+
+
+
+
+
+
+
+</SCRIPT>
+
+
+
+</body>
+</html>
